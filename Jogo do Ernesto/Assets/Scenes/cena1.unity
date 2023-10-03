@@ -17471,6 +17471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 965537128}
   speed: 8
+  jumpingPower: 9.5
   isJumping: 0
   rb: {fileID: 965537130}
   groundCheck: {fileID: 411293534}
@@ -17500,7 +17501,7 @@ MonoBehaviour:
   level3: 2
   level4: 3
   SetActive: 0
-  Ativos: {fileID: 1359271748}
+  Ativos1: {fileID: 1359271748}
   Ativos2: {fileID: 1153215531}
   Ativos3: {fileID: 218066505}
   Ativos4: {fileID: 1153215531}
@@ -17538,6 +17539,45 @@ MonoBehaviour:
   Ativos36: {fileID: 1360287739}
   Ativos37: {fileID: 113328239}
   Ativos38: {fileID: 299408457}
+  ativos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Ernesto: {fileID: 965537126}
   ernesto: {fileID: 661699827}
   ernesto1: {fileID: 1433823548}
@@ -17572,6 +17612,37 @@ MonoBehaviour:
   carneobj1: {fileID: 40931159}
   carneobj2: {fileID: 1838489476}
   carneobj3: {fileID: 1396425078}
+  cutscenes:
+  - {fileID: 661699827}
+  - {fileID: 1433823548}
+  - {fileID: 1001776993}
+  - {fileID: 650944983}
+  - {fileID: 121159724}
+  - {fileID: 750263763}
+  - {fileID: 394437600}
+  - {fileID: 2140842556}
+  - {fileID: 684052464}
+  - {fileID: 1602464581}
+  - {fileID: 1688502638}
+  - {fileID: 1111596660}
+  - {fileID: 1938637039}
+  - {fileID: 523796065}
+  - {fileID: 1592049547}
+  - {fileID: 768837079}
+  - {fileID: 71113885}
+  - {fileID: 2011615089}
+  - {fileID: 861406093}
+  - {fileID: 863196803}
+  - {fileID: 1304944101}
+  - {fileID: 482023479}
+  - {fileID: 1500194824}
+  - {fileID: 227436678}
+  - {fileID: 1903434542}
+  - {fileID: 1205882556}
+  - {fileID: 1761052879}
+  - {fileID: 337449853}
+  - {fileID: 972035079}
+  - {fileID: 141507324}
   ImagemAuto: 1
   animator: {fileID: 965537128}
 --- !u!61 &965537134
@@ -21726,8 +21797,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 965537133}
         m_TargetAssemblyTypeName: ItemScript, Assembly-CSharp
-        m_MethodName: ernestov
-        m_Mode: 1
+        m_MethodName: TrocaCutScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

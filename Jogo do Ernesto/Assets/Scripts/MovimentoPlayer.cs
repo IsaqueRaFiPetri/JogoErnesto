@@ -8,7 +8,7 @@ public class MovimentoPlayer : MonoBehaviour
     public Animator animator;
     private float horizontal;
     public float speed = 8f;
-    private float jumpingPower = 9.5f;
+    public float jumpingPower = 9.5f;
     private bool isFacingRight = true;
 
     public bool isJumping;
@@ -65,23 +65,17 @@ public class MovimentoPlayer : MonoBehaviour
 
             coyoteTimeCounter = 0f;
         }
-
         Flip();
     }
-
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
-
     public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         
-    } 
-    
-    
-
+    }  
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
@@ -92,7 +86,6 @@ public class MovimentoPlayer : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
     private IEnumerator JumpCooldown()
     {
         isJumping = true;
@@ -105,5 +98,4 @@ public class MovimentoPlayer : MonoBehaviour
         animator.SetBool("IsJumping", false);
         }
     }
-    
 }

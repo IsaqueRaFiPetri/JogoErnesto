@@ -20,14 +20,16 @@ public class ItemScript : MonoBehaviour
     public int level4 = 3;
     private Vector3 RespawnPoint;
     public bool SetActive;
-    public GameObject Ativos, Ativos2, Ativos3, Ativos4, Ativos5, Ativos6, Ativos7, Ativos8, Ativos9, Ativos10, Ativos11, Ativos12, Ativos13;
+    public GameObject Ativos1, Ativos2, Ativos3, Ativos4, Ativos5, Ativos6, Ativos7, Ativos8, Ativos9, Ativos10, Ativos11, Ativos12, Ativos13;
     public GameObject Ativos14, Ativos15, Ativos16, Ativos17, Ativos18, Ativos19, Ativos20, Ativos21, Ativos22, Ativos23, Ativos24, Ativos25, Ativos26;
     public GameObject Ativos27, Ativos28, Ativos29, Ativos30, Ativos31, Ativos32, Ativos33, Ativos34, Ativos35, Ativos36, Ativos37, Ativos38;
+    public GameObject[] ativos = new GameObject[29];
     public GameObject Ernesto;
     public GameObject ernesto, ernesto1, ernesto2, ernesto3, ernesto4, ernesto5, ernesto6, ernesto7, ernesto8, ernesto9, ernesto10, ernesto11, ernesto12;
     public GameObject ernesto13, ernesto14, ernesto15, ernesto16, ernesto17, ernesto18, ernesto19, ernesto20, ernesto21, ernesto22, ernesto23, ernesto24, ernesto25;
     public GameObject ernesto26, ernesto27, ernesto28, ernesto29;
     public GameObject carneobj1, carneobj2, carneobj3;
+    public GameObject[] cutscenes = new GameObject[30];
     public bool ImagemAuto = true;
     public Animator animator;
 
@@ -156,7 +158,8 @@ public class ItemScript : MonoBehaviour
         transform.position = RespawnPoint;
          score = 0;
          Ernesto.GetComponent<MovimentoPlayer>().speed = 8f;
-         Ativos.SetActive(true);
+         //Activate();
+         Ativos1.SetActive(true);
          Ativos2.SetActive(true);
          Ativos3.SetActive(true);
          Ativos4.SetActive(true);
@@ -194,179 +197,213 @@ public class ItemScript : MonoBehaviour
          Ativos37.SetActive(true);
          Ativos38.SetActive(true);
     }
-      public void ernestov ()
-      {
-        ernesto.SetActive(false);
-        ernesto1.SetActive(true);
-      }
-      public void ernesto1v ()
-      {
-        ernesto1.SetActive(false);
-        ernesto2.SetActive(true);
-      }
-      public void ernesto2v ()
-      {
-        ernesto2.SetActive(false);
-        ernesto3.SetActive(true);
-      }
-      public void ernesto3v ()
-      {
-        ernesto3.SetActive(false);
-        ernesto4.SetActive(true);
-      }
-      public void ernesto4v ()
-      {
-        ernesto4.SetActive(false);
-        ernesto5.SetActive(true);
-      }
-      public void ernesto5v ()
-      {
-        ernesto5.SetActive(false);
-        Time.timeScale = 1f;
-        ImagemAuto = false;
-      }
-      public void ernesto6v ()
-      {
-        ernesto6.SetActive(false);
-        Time.timeScale = 1f;
-        ImagemAuto = false;
-      }
-      public void ernesto7v ()
-      {
-        ernesto7.SetActive(false);
-        ernesto8.SetActive(true);
-      }
-      public void ernesto8v ()
-      {
-        ernesto8.SetActive(false);
-        ernesto9.SetActive(true);
-      }
-      public void ernesto9v ()
-      {
-        ernesto9.SetActive(false);
-        ernesto10.SetActive(true);
-      }
-      public void ernesto10v ()
-      {
-        ernesto10.SetActive(false);
-        Time.timeScale = 1f;
-        ImagemAuto = false;
-      }
-      public void ernesto11v ()
-      {
-        ernesto11.SetActive(false);
-        ernesto12.SetActive(true);
-      }
-      public void ernesto12v ()
-      {
-        ernesto12.SetActive(false);
-        ernesto13.SetActive(true);
-      }
-      public void ernesto13v ()
-      {
-        ernesto13.SetActive(false);
-        ernesto14.SetActive(true);
-      }
-      public void ernesto14v ()
-      {
-        ernesto14.SetActive(false);
-        ernesto15.SetActive(true);
-      }
-      public void ernesto15v ()
-      {
-        ernesto15.SetActive(false);
-        ernesto16.SetActive(true);
-      }
-      public void ernesto16v ()
-      {
-        ernesto16.SetActive(false);
-        ernesto17.SetActive(true);
-      }
-      public void ernesto17v ()
-      {
-        ernesto17.SetActive(false);
-        ernesto18.SetActive(true);
-      }
-      public void ernesto18v ()
-      {
-        ernesto18.SetActive(false);
-        ernesto19.SetActive(true);
-      }
-      public void ernesto19v ()
-      {
-        ernesto19.SetActive(false);
-        ernesto20.SetActive(true);
-      }
-      public void ernesto20v ()
-      {
-        ernesto20.SetActive(false);
-        ernesto21.SetActive(true);
-      }
-      public void ernesto21v ()
-      {
-        ernesto21.SetActive(false);
-        ernesto22.SetActive(true);
-      }
-      public void ernesto22v ()
-      {
-        ernesto22.SetActive(false);
-        ernesto23.SetActive(true);
-      }
-      public void ernesto23v ()
-      {
-        ernesto23.SetActive(false);
-        ernesto24.SetActive(true);
-      }
-      public void ernesto24v ()
-      {
-        ernesto24.SetActive(false);
-        ernesto25.SetActive(true);
-      }
-      public void ernesto25v ()
-      {
-        ernesto25.SetActive(false);
-        ernesto26.SetActive(true);
-      }
-      public void ernesto26v ()
-      {
-        ernesto26.SetActive(false);
-        ernesto27.SetActive(true);
-      }
-      public void ernesto27v ()
-      {
-        ernesto27.SetActive(false);
-        ernesto28.SetActive(true);
-      }
-      public void ernesto28v ()
-      {
-        ernesto28.SetActive(false);
-        SceneManager.LoadScene("cena0");
-        Time.timeScale = 1f;
-        ImagemAuto = false;
-      }
-      public void ernesto29v ()
-      {
-        ernesto29.SetActive(false);
-        ernesto.SetActive(true);
-      }
-      public void ativadorfase2 ()
-      {
-        ernesto6.SetActive(true);
-        Time.timeScale = 0f;
-        ImagemAuto = true;
-      }
-      public void ativadorfase3 ()
-      {
-        ernesto7.SetActive(true);
-        Time.timeScale = 0f;
-        ImagemAuto = true;
-      }
-      public void ativadorfase3final ()
-      {
-        ernesto11.SetActive(true);
-        Time.timeScale = 0f;
-        ImagemAuto = true;
-      }
+    void Activate() { 
+        for(int i = 0; i < ativos.Length; i++)
+        {
+            /*switch (i){
+                case 17: 
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 29:
+                case 30:
+                case 31:
+                    ativos[i].SetActive(false);
+                    break;
+                default:
+                    ativos[i].SetActive(true); 
+                    break;
+            }*/
+            ativos[i].SetActive(true);
+        }
+    }
+    int index = 0;
+     public void TrocaCutScene()
+    {
+        if (index == 29) { 
+            cutscenes[index].SetActive(false);
+            cutscenes[0].SetActive(true);
+            return;
+        }
+        cutscenes[index].SetActive(false);
+        cutscenes[index +1].SetActive(true);
+        index++;
+    }
+    public void ernestov ()
+    {
+    ernesto.SetActive(false);
+    ernesto1.SetActive(true);
+    }
+    public void ernesto1v ()
+    {
+    ernesto1.SetActive(false);
+    ernesto2.SetActive(true);
+    }
+    public void ernesto2v ()
+    {
+    ernesto2.SetActive(false);
+    ernesto3.SetActive(true);
+    }
+    public void ernesto3v ()
+    {
+    ernesto3.SetActive(false);
+    ernesto4.SetActive(true);
+    }
+    public void ernesto4v ()
+    {
+    ernesto4.SetActive(false);
+    ernesto5.SetActive(true);
+    }
+    public void ernesto5v ()
+    {
+    ernesto5.SetActive(false);
+    Time.timeScale = 1f;
+    ImagemAuto = false;
+    }
+    public void ernesto6v ()
+    {
+    ernesto6.SetActive(false);
+    Time.timeScale = 1f;
+    ImagemAuto = false;
+    }
+    public void ernesto7v ()
+    {
+    ernesto7.SetActive(false);
+    ernesto8.SetActive(true);
+    }
+    public void ernesto8v ()
+    {
+    ernesto8.SetActive(false);
+    ernesto9.SetActive(true);
+    }
+    public void ernesto9v ()
+    {
+    ernesto9.SetActive(false);
+    ernesto10.SetActive(true);
+    }
+    public void ernesto10v ()
+    {
+    ernesto10.SetActive(false);
+    Time.timeScale = 1f;
+    ImagemAuto = false;
+    }
+    public void ernesto11v ()
+    {
+    ernesto11.SetActive(false);
+    ernesto12.SetActive(true);
+    }
+    public void ernesto12v ()
+    {
+    ernesto12.SetActive(false);
+    ernesto13.SetActive(true);
+    }
+    public void ernesto13v ()
+    {
+    ernesto13.SetActive(false);
+    ernesto14.SetActive(true);
+    }
+    public void ernesto14v ()
+    {
+    ernesto14.SetActive(false);
+    ernesto15.SetActive(true);
+    }
+    public void ernesto15v ()
+    {
+    ernesto15.SetActive(false);
+    ernesto16.SetActive(true);
+    }
+    public void ernesto16v ()
+    {
+    ernesto16.SetActive(false);
+    ernesto17.SetActive(true);
+    }
+    public void ernesto17v ()
+    {
+    ernesto17.SetActive(false);
+    ernesto18.SetActive(true);
+    }
+    public void ernesto18v ()
+    {
+    ernesto18.SetActive(false);
+    ernesto19.SetActive(true);
+    }
+    public void ernesto19v ()
+    {
+    ernesto19.SetActive(false);
+    ernesto20.SetActive(true);
+    }
+    public void ernesto20v ()
+    {
+    ernesto20.SetActive(false);
+    ernesto21.SetActive(true);
+    }
+    public void ernesto21v ()
+    {
+    ernesto21.SetActive(false);
+    ernesto22.SetActive(true);
+    }
+    public void ernesto22v ()
+    {
+    ernesto22.SetActive(false);
+    ernesto23.SetActive(true);
+    }
+    public void ernesto23v ()
+    {
+    ernesto23.SetActive(false);
+    ernesto24.SetActive(true);
+    }
+    public void ernesto24v ()
+    {
+    ernesto24.SetActive(false);
+    ernesto25.SetActive(true);
+    }
+    public void ernesto25v ()
+    {
+    ernesto25.SetActive(false);
+    ernesto26.SetActive(true);
+    }
+    public void ernesto26v ()
+    {
+    ernesto26.SetActive(false);
+    ernesto27.SetActive(true);
+    }
+    public void ernesto27v ()
+    {
+    ernesto27.SetActive(false);
+    ernesto28.SetActive(true);
+    }
+    public void ernesto28v ()
+    {
+    ernesto28.SetActive(false);
+    SceneManager.LoadScene("cena0");
+    Time.timeScale = 1f;
+    ImagemAuto = false;
+    }
+    public void ernesto29v ()
+    {
+    ernesto29.SetActive(false);
+    ernesto.SetActive(true);
+    }
+    public void ativadorfase2 ()
+    {
+    ernesto6.SetActive(true);
+    Time.timeScale = 0f;
+    ImagemAuto = true;
+    }
+    public void ativadorfase3 ()
+    {
+    ernesto7.SetActive(true);
+    Time.timeScale = 0f;
+    ImagemAuto = true;
+    }
+    public void ativadorfase3final ()
+    {
+    ernesto11.SetActive(true);
+    Time.timeScale = 0f;
+    ImagemAuto = true;
+    }
 
 
 }
