@@ -200,8 +200,8 @@ public class ItemScript : MonoBehaviour
     void Activate() { 
         for(int i = 0; i < ativos.Length; i++)
         {
-            /*switch (i){
-                case 17: 
+            switch (i){
+                case int n when (n>=17 && n<=22 || n>=29 && n<=31): 
                 case 18:
                 case 19:
                 case 20:
@@ -215,7 +215,7 @@ public class ItemScript : MonoBehaviour
                 default:
                     ativos[i].SetActive(true); 
                     break;
-            }*/
+            }
             ativos[i].SetActive(true);
         }
     }
