@@ -20,10 +20,11 @@ public class ItemScript : MonoBehaviour
     public int level4 = 3;
     private Vector3 RespawnPoint;
     public bool SetActive;
-    public GameObject Ativos1, Ativos2, Ativos3, Ativos4, Ativos5, Ativos6, Ativos7, Ativos8, Ativos9, Ativos10, Ativos11, Ativos12, Ativos13;
+    /*public GameObject Ativos1, Ativos2, Ativos3, Ativos4, Ativos5, Ativos6, Ativos7, Ativos8, Ativos9, Ativos10, Ativos11, Ativos12, Ativos13;
     public GameObject Ativos14, Ativos15, Ativos16, Ativos17, Ativos18, Ativos19, Ativos20, Ativos21, Ativos22, Ativos23, Ativos24, Ativos25, Ativos26;
-    public GameObject Ativos27, Ativos28, Ativos29, Ativos30, Ativos31, Ativos32, Ativos33, Ativos34, Ativos35, Ativos36, Ativos37, Ativos38;
-    public GameObject[] ativos = new GameObject[29];
+    public GameObject Ativos27, Ativos28, Ativos29, Ativos30, Ativos31, Ativos32, Ativos33, Ativos34, Ativos35, Ativos36, Ativos37, Ativos38;*/
+    public GameObject[] ativos = new GameObject[38];
+    //Os ativos são os coletáveis e os inimigos
     public GameObject Ernesto;
     public GameObject ernesto, ernesto1, ernesto2, ernesto3, ernesto4, ernesto5, ernesto6, ernesto7, ernesto8, ernesto9, ernesto10, ernesto11, ernesto12;
     public GameObject ernesto13, ernesto14, ernesto15, ernesto16, ernesto17, ernesto18, ernesto19, ernesto20, ernesto21, ernesto22, ernesto23, ernesto24, ernesto25;
@@ -32,6 +33,7 @@ public class ItemScript : MonoBehaviour
     public GameObject[] cutscenes = new GameObject[30];
     public bool ImagemAuto = true;
     public Animator animator;
+    int index = 0;
 
     private void Start()
     {
@@ -158,8 +160,8 @@ public class ItemScript : MonoBehaviour
         transform.position = RespawnPoint;
          score = 0;
          Ernesto.GetComponent<MovimentoPlayer>().speed = 8f;
-         //Activate();
-         Ativos1.SetActive(true);
+         Activate();
+         /*Ativos1.SetActive(true);
          Ativos2.SetActive(true);
          Ativos3.SetActive(true);
          Ativos4.SetActive(true);
@@ -195,13 +197,14 @@ public class ItemScript : MonoBehaviour
          Ativos35.SetActive(true);
          Ativos36.SetActive(true);
          Ativos37.SetActive(true);
-         Ativos38.SetActive(true);
+         Ativos38.SetActive(true);*/
     }
     void Activate() { 
         for(int i = 0; i < ativos.Length; i++)
         {
             switch (i){
-                case int n when (n>=17 && n<=22 || n>=29 && n<=31): 
+                case int n when (n>=17 && n<=22 || n>=29 && n<=31):
+                /*case 17:
                 case 18:
                 case 19:
                 case 20:
@@ -209,17 +212,18 @@ public class ItemScript : MonoBehaviour
                 case 22:
                 case 29:
                 case 30:
-                case 31:
+                case 31:*/
                     ativos[i].SetActive(false);
                     break;
                 default:
                     ativos[i].SetActive(true); 
                     break;
+                //Os cases que estão numerados são os das carnes
             }
             ativos[i].SetActive(true);
         }
     }
-    int index = 0;
+    
      public void TrocaCutScene()
     {
         if (index == 29) { 
