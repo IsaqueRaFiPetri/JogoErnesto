@@ -10,6 +10,7 @@ public class Ntitodo : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         Objeto.GetComponent<MovimentoPlayer>().speed = 8f;
+        Objeto.GetComponent<MovimentoPlayer>().jumpingPower = 9.5f;
         collec.SetActive(false);
     }
 
