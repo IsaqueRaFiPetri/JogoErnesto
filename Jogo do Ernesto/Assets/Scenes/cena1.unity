@@ -15580,7 +15580,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 965537133}
         m_TargetAssemblyTypeName: ItemScript, Assembly-CSharp
-        m_MethodName: ernesto29v
+        m_MethodName: TrocaCutScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

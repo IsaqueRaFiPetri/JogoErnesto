@@ -408,6 +408,4 @@ public class ItemScript : MonoBehaviour
     Time.timeScale = 0f;
     ImagemAuto = true;
     }
-
-
 }
