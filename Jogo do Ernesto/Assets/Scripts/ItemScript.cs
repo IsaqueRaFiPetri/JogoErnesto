@@ -82,7 +82,7 @@ public class ItemScript : MonoBehaviour
         }
         if (ImagemAuto == true)
         {
-          Time.timeScale = 0f;
+          Time.timeScale = 1f;
         }
         
 
@@ -223,13 +223,20 @@ public class ItemScript : MonoBehaviour
             ativos[i].SetActive(true);
         }
     }
-    
+     public void PrintTime() {
+        print(Time.timeScale);
+
+    }
      public void TrocaCutScene()
     {
         if (index == 29) { 
             cutscenes[index].SetActive(false);
             cutscenes[0].SetActive(true);
             return;
+        }
+        if (index >= 6)
+        {
+            Time.timeScale = 1f;
         }
         cutscenes[index].SetActive(false);
         cutscenes[index +1].SetActive(true);
